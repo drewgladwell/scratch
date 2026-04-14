@@ -251,11 +251,13 @@ nav a { padding: 6px 10px; font-size: 14px; }
     position: relative;
     width: 100%;
     max-width: 100%;
+    /* keep a comfortable desktop width similar to original embeds */
+    max-width: 1008px;
     padding-top: 56.25%; /* 16:9 */
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(16,24,40,0.06);
-    margin: 0.85rem 0;
+    margin: 0.85rem auto;
 }
 .video-wrapper iframe{
     position: absolute;
