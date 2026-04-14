@@ -124,11 +124,23 @@ body {
     display: flex;
     flex-direction: column;
 }
+.app-wide {
+    width: 100vw;
+}
+.full-bleed {
+    width: 100vw;
+    box-sizing: border-box;
+    left: 0;
+}
+.hide-overflow-x { overflow-x: hidden; }
 .header {
     flex: 0 0 80px;
+    width: 100%;
+    box-sizing: border-box;
 }
 nav {
     flex: 0 0 auto;
+    width: 100%;
 }
 .mainbody {
     flex: 1 0 auto;
@@ -232,6 +244,33 @@ nav a { padding: 6px 10px; font-size: 14px; }
     .mainbody { padding: 0.6rem; margin: 0.6rem; }
     .header h1 { font-size: 1.05rem; }
     .footer { font-size: 13px; padding: 0 6px; }
+}
+
+/* Responsive video/iframe wrapper (keeps 16:9 aspect ratio) */
+.video-wrapper{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+    margin: 0.85rem 0;
+}
+.video-wrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Fallback: target any iframe inside .common to be fluid */
+.common iframe{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 
