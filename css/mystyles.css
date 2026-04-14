@@ -200,4 +200,39 @@ nav {
     height: calc(100vh - 125px);
 }
 
+/* Mobile-friendly tweaks */
+/* make images fluid */
+.mainbody img, img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header { min-height: 56px; height: auto; padding: 0.6rem 1rem; }
+.footer { height: 40px; line-height: 40px; padding: 0 10px; bottom: 10px; right: 10px; }
+
+nav { flex-wrap: wrap; gap: 8px; padding: 8px; }
+nav a { padding: 6px 10px; font-size: 14px; }
+
+/* Ensure embedded viz/video scales nicely on narrow viewports */
+.tableauPlaceholder .tableauViz,
+.video-bg.fullscreen {
+    height: calc(100vh - 120px) !important;
+}
+
+@media (max-width: 768px) {
+    .mainbody { margin: 1rem; padding: 0.9rem; }
+    .header { padding: 0.5rem; font-size: 1.05rem; }
+    .footer { height: 36px; line-height: 36px; padding: 0 8px; bottom: 8px; right: 8px; }
+    .video-bg.fullscreen { height: calc(100vh - 100px) !important; }
+    nav a { font-size: 13px; padding: 6px 8px; }
+    img { border-radius: 6px; }
+}
+
+@media (max-width: 420px) {
+    .mainbody { padding: 0.6rem; margin: 0.6rem; }
+    .header h1 { font-size: 1.05rem; }
+    .footer { font-size: 13px; padding: 0 6px; }
+}
+
+
 
