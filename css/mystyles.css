@@ -269,11 +269,10 @@ nav a { padding: 6px 10px; font-size: 14px; }
 }
 
 /* Fallback: target any iframe inside .common to be fluid */
-.common iframe{
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
-
 
 
